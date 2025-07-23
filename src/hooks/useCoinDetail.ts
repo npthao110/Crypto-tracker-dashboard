@@ -51,7 +51,7 @@ interface CoinDetail {
   last_updated: string;
 }
 
-const API_KEY = 'CG-3zbUUBdKWr6KyaeJ2Ajvt3tt';
+const API_KEY = import.meta.env.VITE_REACT_APP_COINGECKO_API_KEY;
 
 export const useCoinDetail = (coinId: string) => {
   const [coin, setCoin] = useState<CoinDetail | null>(null);
