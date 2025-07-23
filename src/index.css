@@ -60,3 +60,17 @@
 .animate-pulse {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
+
+/* Chart styling */
+.recharts-tooltip-wrapper {
+  z-index: 1000;
+}
+
+/* Sidebar styling */
+.sidebar-nav a {
+  transition: all 0.2s ease;
+}
+
+.sidebar-nav a:hover {
+  transform: translateX(4px);
+}

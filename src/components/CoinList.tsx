@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { CryptoCoin } from '../types/crypto';
 
 interface CoinListProps {
@@ -57,9 +58,10 @@ export const CoinList: React.FC<CoinListProps> = ({ coins, loading }) => {
   return (
     <div className="space-y-4">
       {coins.map((coin) => (
-        <div
+        <Link
+          to={`/coin/${coin.id}`}
           key={coin.id}
-          className="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-200 hover:shadow-lg"
+          className="block bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-200 hover:shadow-lg cursor-pointer"
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
@@ -97,7 +99,7 @@ export const CoinList: React.FC<CoinListProps> = ({ coins, loading }) => {
               </div>
             </div>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
